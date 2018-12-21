@@ -9,7 +9,8 @@ namespace _2048
         DeShow show;
         ShowStat stat;
         static Random rand = new Random();
-        bool moved = false;
+        bool moved;
+
         public Logic(int size, DeShow show, ShowStat stat)
         {
             this.size = size;
@@ -147,17 +148,17 @@ namespace _2048
         {
             switch (rand.Next(10))
             {
-                case 0: return 2; break;
-                case 1: return 2; break;
-                case 2: return 2; break;
-                case 3: return 2; break;
-                case 4: return 2; break;
-                case 5: return 2; break;
-                case 6: return 2; break;
-                case 7: return 2; break;
-                case 8: return 4; break;
-                case 9: return 4; break;
-                default: return 2; break;
+                case 0: return 2; 
+                case 1: return 2; 
+                case 2: return 2; 
+                case 3: return 2; 
+                case 4: return 2; 
+                case 5: return 2;
+                case 6: return 2; 
+                case 7: return 2; 
+                case 8: return 4; 
+                case 9: return 4; 
+                default: return 2; 
             }
         }
 

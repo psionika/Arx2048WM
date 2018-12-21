@@ -55,9 +55,9 @@ namespace _2048
 
         private static Color Hex2Color(string hex)
         {
-            int r = int.Parse(hex.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
-            int g = int.Parse(hex.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
-            int b = int.Parse(hex.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
+            int r = int.Parse(hex.Substring(0, 2), NumberStyles.HexNumber);
+            int g = int.Parse(hex.Substring(2, 2), NumberStyles.HexNumber);
+            int b = int.Parse(hex.Substring(4, 2), NumberStyles.HexNumber);
 
             return Color.FromArgb( r, g, b);
         }
@@ -161,7 +161,6 @@ namespace _2048
                 case Keys.Up: logic.ShiftUp(); break;
                 case Keys.Down: logic.ShiftDown(); break;
                 case Keys.Escape: logic.InitGame(); break;
-                default: break;
             }
             if (logic.GameOver())
             {
